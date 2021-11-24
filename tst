@@ -22,12 +22,12 @@ os.chdir(project_path + "testing/")
 if len(argv) == 1:
     create_base_template()
 else:
-    if argv[1] in ['p', "pygame"]:
+    arg = argv[1]
+    if arg in ['-p', "--pygame"]:
         create_pygame_template()
+    elif arg in ['-c', "--config"]:
+        os.system(f"nvim {project_path}/tst")
     else:
         print("Unknow argument")
-
-
-
 
 
