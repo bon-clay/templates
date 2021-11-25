@@ -21,7 +21,8 @@ def create_pygame_template():
 
 
 def create_vim_template():
-    os.system(f"cp {project_path}/templates/pygame_template.py {project_path}/testing/{vim_test_file_name}")
+    with open(vim_test_file_name, 'w') as f:
+        f.write('')
     os.system(f"nvim {vim_test_file_name}")
 
 
