@@ -22,7 +22,7 @@ def create_pygame_template():
 
 def create_vim_template():
     os.system(f"cp {project_path}/templates/pygame_template.py {project_path}/testing/{vim_test_file_name}")
-    os.system("nvim {vim_test_file_name}")
+    os.system(f"nvim {vim_test_file_name}")
 
 
 os.chdir(project_path + "testing/")
